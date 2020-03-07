@@ -30,19 +30,11 @@ import java.awt.event.*;
       searchBar.setBounds(5, 45, 207, 35);
       frame.add(searchBar);
 
-      // Add(s) "Asc" Button
-      JRadioButton ascend = new JRadioButton("Asc");
-      ascend.setBounds(45, 300, 100, 30);
-      frame.add(ascend);
-
-      // Add(s) "Desc" Button
-      JRadioButton descend = new JRadioButton("Desc");
-      descend.setBounds(75, 300, 100, 30);
-      frame.add(descend);
 
       // JFrame Option(s)
       frame.setLayout(null);
       frame.setVisible(true);
+      frame.setResizable(false);
     }
 
     public static void main(String[] args){
