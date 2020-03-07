@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.JSeparator;
 
   public class dictionary {
 
@@ -44,9 +43,15 @@ import javax.swing.JSeparator;
       descend.setBounds(129, 80, 55, 30);
       frame.add(descend);
 
-      // Add(s) JSeperator
-      JSeperator seperate = new JSeperator();
-      seperate.setBounds(5, 80, 55, 303);
+      // CheckBoxes --> Group
+      ButtonGroup group = new ButtonGroup();
+      group.add(ascend);
+      group.add(descend);
+
+      JTextArea definition = new JTextArea();
+      definition.setBounds(218, 5, 660, 700);
+      definition.setEditable(false);
+      frame.add(definition);
 
       // JFrame Option(s)
       frame.setLayout(null);
