@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.JSeparator;
 
   public class dictionary {
 
@@ -13,6 +14,9 @@ import java.awt.event.*;
       frame.setPreferredSize(new Dimension(900, 750));
       frame.pack();
       frame.setLocationRelativeTo(null);
+
+
+      // .setBounds = (int x, int y, int width, int height)
 
       // Add(s) "Add" Button
       JButton add = new JButton("Add");
@@ -30,6 +34,19 @@ import java.awt.event.*;
       searchBar.setBounds(5, 45, 207, 35);
       frame.add(searchBar);
 
+      // Add(s) "Ascending" CheckBox
+      JCheckBox ascend = new JCheckBox("Asc");
+      ascend.setBounds(22, 80, 50, 30 );
+      frame.add(ascend);
+
+      // Add(s) "Descending" JCheckBox
+      JCheckBox descend = new JCheckBox("Desc");
+      descend.setBounds(129, 80, 55, 30);
+      frame.add(descend);
+
+      // Add(s) JSeperator
+      JSeperator seperate = new JSeperator();
+      seperate.setBounds(5, 80, 55, 303);
 
       // JFrame Option(s)
       frame.setLayout(null);
