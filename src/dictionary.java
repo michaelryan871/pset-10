@@ -33,6 +33,14 @@ import java.util.List;
 
       // Add(s) "Remove" Button
       JButton remove = new JButton("Remove");
+      remove.addActionListener(new ActionListener()
+      {
+        public void actionPerformed(ActionEvent e)
+        {
+          System.out.println("Remove Placeholder");
+        }
+      });
+
       remove.setBounds(110, 5, 100, 35);
       frame.add(remove);
 
@@ -44,6 +52,14 @@ import java.util.List;
 
       // Add(s) "Ascending" CheckBox
       JCheckBox ascend = new JCheckBox("Asc");
+      ascend.addActionListener(new ActionListener()
+      {
+        public void actionPerformed(ActionEvent e)
+        {
+          System.out.println("Ascend Placeholder");
+        }
+      });
+      
       ascend.setBounds(22, 80, 50, 30 );
       frame.add(ascend);
 
