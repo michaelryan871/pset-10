@@ -59,12 +59,20 @@ import java.util.List;
           System.out.println("Ascend Placeholder");
         }
       });
-      
+
       ascend.setBounds(22, 80, 50, 30 );
       frame.add(ascend);
 
       // Add(s) "Descending" JCheckBox
       JCheckBox descend = new JCheckBox("Desc");
+      ascend.addActionListener(new ActionListener()
+      {
+        public void actionPerformed(ActionEvent e)
+        {
+          System.out.println("Descend Placeholder");
+        }
+      });
+
       descend.setBounds(129, 80, 55, 30);
       frame.add(descend);
 
