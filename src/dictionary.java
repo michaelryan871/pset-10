@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.List;
 
   public class dictionary {
 
@@ -14,11 +16,18 @@ import java.awt.event.*;
       frame.pack();
       frame.setLocationRelativeTo(null);
 
-
       // .setBounds = (int x, int y, int width, int height)
 
       // Add(s) "Add" Button
       JButton add = new JButton("Add");
+      add.addActionListener(new ActionListener()
+      {
+        public void actionPerformed(ActionEvent e)
+        {
+          System.out.println("Add Placeholder");
+        }
+      });
+
       add.setBounds(5, 5, 100, 35);
       frame.add(add);
 
@@ -48,10 +57,22 @@ import java.awt.event.*;
       group.add(ascend);
       group.add(descend);
 
+      // JTextArea --> Stores definitions, etc...
       JTextArea definition = new JTextArea();
       definition.setBounds(218, 5, 660, 700);
       definition.setEditable(false);
       frame.add(definition);
+
+      // List --> Stores words
+      JList words = new JList();
+      words.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+      words.setLayoutOrientation(JList.HORIZONTAL_WRAP);
+      words.setVisibleRowCount(-1);
+      words.setBounds(600, 600, 200, 200);
+      JScrollPane listScroller = new JScrollPane(words);
+      listScroller.setPreferredSize(new Dimension(250, 80));
+      frame.add(words);
+      frame.add(listScroller);
 
       // JFrame Option(s)
       frame.setLayout(null);
